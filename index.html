@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador de texto</title>
-</head>
-<body>
-    <h1>Encriptador de texto</h1>
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="imagenes/logo.png" alt="Logo" />
+      </div>
+    </header>
+    <main>
+      <section class="texto">
+        <form>
+          <textarea name="ingresar-texto">Ingrese el texto aquí</textarea>
+          <p>
+            <i class="fa fa-exclamation-circle"></i> Solo letras minúsculas y
+            sin acentos
+          </p>
+          <p>
+            <input type="button" value="Encriptar" />
+            <input type="button" value="Desencriptar" />
+          </p>
+        </form>
+      </section>
+      <section class="mensaje">
+        <div class="ningun-mensaje">
+          <img src="imagenes/muneco.png" alt="Muñeco con una lupa" />
+          <p>Ningún mensaje fue encontrado</p>
+          <p>Ingresa el texto que desees encriptar o desencriptar</p>
+        </div>
+        <div class="contenido-mensaje">
+          <textarea name="mensaje-resultante"></textarea>
+          <button>Copiar</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="redes-sociales">
+        <a href="https://www.linkedin.com/in/nelsoncruz89/"
+          ><i class="fa fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/ndcruzc89/"><i class="fa fa-github"></i></a>
+      </div>
+      <p class="copyright">&copy Copyright Nelson Cruz - 2023</p>
+    </footer>
+  </body>
 </html>
