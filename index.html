@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -12,42 +20,45 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="imagenes/logo.png" alt="Logo" />
-      </div>
+      <img src="imagenes/logo.png" alt="Logo" />
     </header>
     <main>
       <section class="texto">
         <form>
-          <textarea name="ingresar-texto">Ingrese el texto aquí</textarea>
-          <p>
+          <textarea
+            name="ingresar-texto"
+            placeholder="Ingrese el texto aquí"
+          ></textarea>
+          <p class="alerta-texto">
             <i class="fa fa-exclamation-circle"></i> Solo letras minúsculas y
             sin acentos
           </p>
-          <p>
-            <input type="button" value="Encriptar" />
-            <input type="button" value="Desencriptar" />
+          <p class="botones">
+            <input class="boton-encriptar" type="button" value="Encriptar" />
+            <input class="boton-desencriptar" type="button" value="Desencriptar" />
           </p>
         </form>
       </section>
       <section class="mensaje">
         <div class="ningun-mensaje">
           <img src="imagenes/muneco.png" alt="Muñeco con una lupa" />
-          <p>Ningún mensaje fue encontrado</p>
-          <p>Ingresa el texto que desees encriptar o desencriptar</p>
+          <p class="alerta-ningun-mensaje">Ningún mensaje fue encontrado</p>
+          <p class="alerta-ingresar-mensaje">
+            Ingresa el texto que desees encriptar o desencriptar
+          </p>
         </div>
         <div class="contenido-mensaje">
-          <textarea name="mensaje-resultante"></textarea>
-          <button>Copiar</button>
+          <textarea name="mensaje-resultante" readonly></textarea>
+          <button class="boton-copiar">Copiar</button>
         </div>
       </section>
     </main>
     <footer>
       <div class="redes-sociales">
-        <a href="https://www.linkedin.com/in/nelsoncruz89/"
+        <a class="red-social" href="https://www.linkedin.com/in/nelsoncruz89/"
           ><i class="fa fa-linkedin"></i
         ></a>
-        <a href="https://github.com/ndcruzc89/"><i class="fa fa-github"></i></a>
+        <a class="red-social" href="https://github.com/ndcruzc89/"><i class="fa fa-github"></i></a>
       </div>
       <p class="copyright">&copy Copyright Nelson Cruz - 2023</p>
     </footer>
