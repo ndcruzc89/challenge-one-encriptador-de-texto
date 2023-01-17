@@ -45,7 +45,7 @@ main {
   width: 680px;
 }
 
-.texto textarea {
+.ingresar-texto {
   color: #0a3871;
   font-size: 32px;
   width: 100%;
@@ -53,14 +53,14 @@ main {
   margin-top: 120px;
   border: none;
   resize: none;
-  /* text-transform: lowercase; */
+  text-transform: lowercase;
 }
 
-.texto textarea:focus {
+.ingresar-texto:focus {
   outline: none;
 }
 
-.texto textarea::placeholder {
+.ingresar-texto::placeholder {
     color: #0a3871;
 }
 
@@ -112,7 +112,6 @@ main {
   background: #ffffff;
   width: 336px;
   margin: 0 auto;
-  /* display: none; */
 }
 
 .ningun-mensaje img {
@@ -140,9 +139,9 @@ main {
 
 
 .contenido-mensaje {
-  display: none;
   background: #ffffff;
   margin: 40px 32px 0;
+  /* display: none; */
 }
 
 .contenido-mensaje textarea {
@@ -158,6 +157,10 @@ main {
 
 .contenido-mensaje textarea:focus {
   outline: none;
+}
+
+.ocultar {
+  display: none;
 }
 
 .boton-copiar {

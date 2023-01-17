@@ -25,7 +25,7 @@
     <main>
       <section class="texto">
         <form>
-          <textarea
+          <textarea class="ingresar-texto"
             name="ingresar-texto"
             placeholder="Ingrese el texto aquí"
           ></textarea>
@@ -47,8 +47,8 @@
             Ingresa el texto que desees encriptar o desencriptar
           </p>
         </div>
-        <div class="contenido-mensaje">
-          <textarea name="mensaje-resultante" readonly></textarea>
+        <div class="contenido-mensaje ocultar">
+          <textarea class="mensaje-resultante" name="mensaje-resultante" readonly></textarea>
           <button class="boton-copiar">Copiar</button>
         </div>
       </section>
@@ -62,5 +62,6 @@
       </div>
       <p class="copyright">&copy Copyright Nelson Cruz - 2023</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
