@@ -7,7 +7,8 @@ const btnEncriptar = document.querySelector(".boton-encriptar");
 const btnDesencriptar = document.querySelector(".boton-desencriptar");
 const btnCopiar = document.querySelector(".boton-copiar");
 
-function encriptar() {
+function encriptar(event) {
+  event.preventDefault();
   campoTexto = document.querySelector(".ingresar-texto").value;
   campoMensaje = document.querySelector(".mensaje-resultante");
   mensaje = "";
@@ -36,7 +37,8 @@ function encriptar() {
   }
 }
 
-function desencriptar() {
+function desencriptar(event) {
+  event.preventDefault();
   campoTexto = document.querySelector(".ingresar-texto").value;
   campoMensaje = document.querySelector(".mensaje-resultante");
   mensaje = "";
