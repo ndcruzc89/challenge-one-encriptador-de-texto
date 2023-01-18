@@ -1,11 +1,5 @@
-const a = "ai";
-const e = "enter";
-const i = "imes";
-const o = "ober";
-const u = "ufat";
-
-let campoTexto;
 let mensaje = "";
+let campoTexto;
 let campoMensaje;
 const contenidoMensaje = document.querySelector(".contenido-mensaje");
 const ningunMensaje = document.querySelector(".ningun-mensaje");
@@ -22,17 +16,16 @@ function encriptar() {
     contenidoMensaje.classList.add("ocultar");
   } else {
     for (let index = 0; index < campoTexto.length; index++) {
-      console.log(campoTexto.length);
       if (campoTexto.charAt(index) == "a") {
-        mensaje += a;
+        mensaje += "ai";
       } else if (campoTexto.charAt(index) == "e") {
-        mensaje += e;
+        mensaje += "enter";
       } else if (campoTexto.charAt(index) == "i") {
-        mensaje += i;
+        mensaje += "imes";
       } else if (campoTexto.charAt(index) == "o") {
-        mensaje += o;
+        mensaje += "ober";
       } else if (campoTexto.charAt(index) == "u") {
-        mensaje += u;
+        mensaje += "ufat";
       } else {
         mensaje += campoTexto.charAt(index);
       }
@@ -43,4 +36,25 @@ function encriptar() {
   }
 }
 
+function desencriptar() {
+  campoTexto = document.querySelector(".ingresar-texto").value;
+  campoMensaje = document.querySelector(".mensaje-resultante");
+  mensaje = "";
+  if (campoTexto === "") {
+    ningunMensaje.classList.remove("ocultar");
+    contenidoMensaje.classList.add("ocultar");
+  } else {
+    mensaje = campoTexto
+      .replaceAll("ai", "a")
+      .replaceAll("enter", "e")
+      .replaceAll("imes", "i")
+      .replaceAll("ober", "o")
+      .replaceAll("ufat", "u");
+    ningunMensaje.classList.add("ocultar");
+    contenidoMensaje.classList.remove("ocultar");
+    campoMensaje.value = mensaje;
+  }
+}
+
 btnEncriptar.onclick = encriptar;
+btnDesencriptar.onclick = desencriptar;
