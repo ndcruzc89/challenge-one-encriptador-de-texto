@@ -58,5 +58,12 @@ function desencriptar(event) {
   }
 }
 
+function copiar(event) {
+  event.preventDefault();
+  campoMensaje = document.querySelector(".mensaje-resultante").value;
+  navigator.clipboard.writeText(campoMensaje);
+}
+
 btnEncriptar.onclick = encriptar;
 btnDesencriptar.onclick = desencriptar;
+btnCopiar.onclick = copiar;
