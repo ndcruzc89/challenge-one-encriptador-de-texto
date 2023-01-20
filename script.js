@@ -12,7 +12,7 @@ function encriptar(event) {
   campoTexto = document.querySelector(".ingresar-texto").value;
   campoMensaje = document.querySelector(".mensaje-resultante");
   mensaje = "";
-  if (campoTexto === "") {
+  if (campoTexto === "" || !(/^[a-z\u00f1\s]+$/.test(campoTexto))) {
     ningunMensaje.classList.remove("ocultar");
     contenidoMensaje.classList.add("ocultar");
   } else {
@@ -42,7 +42,7 @@ function desencriptar(event) {
   campoTexto = document.querySelector(".ingresar-texto").value;
   campoMensaje = document.querySelector(".mensaje-resultante");
   mensaje = "";
-  if (campoTexto === "") {
+  if (campoTexto === "" || !(/^[a-z\u00f1\s]+$/.test(campoTexto))) {
     ningunMensaje.classList.remove("ocultar");
     contenidoMensaje.classList.add("ocultar");
   } else {
